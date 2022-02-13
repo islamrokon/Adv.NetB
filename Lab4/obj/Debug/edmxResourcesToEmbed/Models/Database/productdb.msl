@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sp22BModelStoreContainer" CdmEntityContainer="sp22BEntities3">
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="sp22BModel.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="cId" ColumnName="cId" />
+          <ScalarProperty Name="pId" ColumnName="pId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orderdetails">
+      <EntityTypeMapping TypeName="sp22BModel.Orderdetail">
+        <MappingFragment StoreEntitySet="Orderdetails">
+          <ScalarProperty Name="oId" ColumnName="oId" />
+          <ScalarProperty Name="cId" ColumnName="cId" />
+          <ScalarProperty Name="orderno" ColumnName="orderno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="sp22BModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="pId" ColumnName="pId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,15 @@
+﻿@model Lab4.Models.Database.Product
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h2 class="alert-danger">Are you sure to delete this Product</h2>
+<form action="/Product/Delete" method="post">
+    <input type="text" name="id" value="@Model.pId" class="form-control" placeholder="ID" />
+    <input type="text" name="Name" value="@Model.Name" class="form-control" placeholder="Name" />
+    <input type="text" name="Price" value="@Model.Price" class="form-control" placeholder="CGPA" />
+    <input type="text" name="Qty" value="@Model.Qty" class="form-control" placeholder="Quantity"/>
+    <input type="submit" class="btn btn-danger" value="Delete" />
+</form>

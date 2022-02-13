@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Viewcart";
+} 
+<h2>Viewcart</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var p in Session.Contents)
+     {
+<tr>
+    <td>@p.pId</td>
+    <td>@p.Name</td>
+    <td>@p.Qty</td>
+    <td>@p.Price</td>
+    <td><a class="btn btn-info" href="/Product/Index">Confirm Order</a></td>
+</tr>
+     }
+    </table>

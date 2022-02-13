@@ -1,0 +1,33 @@
+﻿@model List<Lab4.Models.Database.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>All Products</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>Add to cart</th>
+    </tr>
+    @foreach (var p in Model)
+    {
+<tr>
+
+    <td>@p.pId</td>
+    <td>@p.Name</td>
+    <td>@p.Qty</td>
+    <td>@p.Price</td>
+    <td><a class="btn btn-info" href="/Product/Edit/@p.pId">Edit</a></td>
+    <td><a class="btn btn-danger" href="/Product/Delete/@p.pId">Delete</a></td>
+    <td><a class="btn btn-info" href="/Product/Cart/@p.pId"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
+</tr>
+    <a class="btn btn-info" href="/Product/Viewcart">View Cart</a>
+    }
+</table>
+
+
